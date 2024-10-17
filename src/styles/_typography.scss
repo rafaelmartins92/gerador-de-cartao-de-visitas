@@ -1,0 +1,101 @@
+$font-family-heading: 'Darker Grotesque', sans-serif;
+$font-family-body: 'Nunito Sans', sans-serif;
+
+@mixin heading-lg {
+  font-family: $font-family-heading;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 100%;
+}
+
+@mixin heading-md {
+  font-family: $font-family-heading;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 100%;
+}
+
+@mixin heading-sm {
+  font-family: $font-family-heading;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@mixin heading-xs {
+  font-family: $font-family-heading;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@mixin subtitle-sm {
+  font-family: $font-family-body;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+@mixin subtitle-xs {
+  font-family: $font-family-body;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+@mixin body-lg {
+  font-family: $font-family-body;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@mixin body-md {
+  font-family: $font-family-body;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@mixin body-sm {
+  font-family: $font-family-body;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+h1 {
+  @include heading-lg;
+}
+
+h2 {
+  @include heading-md;
+}
+
+h3 {
+  @include heading-sm;
+}
+
+h4 {
+  @include heading-xs;
+}
+
+.subtitle-sm {
+  @include subtitle-sm;
+}
+
+.subtitle-xs {
+  @include subtitle-xs;
+}
+
+.body-lg {
+  @include body-lg;
+}
+
+.body-md {
+  @include body-md;
+}
+
+.body-sm {
+  @include body-sm;
+}

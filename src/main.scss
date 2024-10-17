@@ -1,15 +1,19 @@
+@import './styles/colors';
+@import './styles/typography';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
+  font-family: $font-family-body;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-style: normal;
+  background: $color-background;
+  color: $color-white;
 }
 
-form,
-.business-card {
-  max-width: 620px;
-  margin: auto;
-  padding: 20px;
-  background-color: white;
-}
-
-label, input, button {
-  display: block;
-}
+@import './styles/transitions';
