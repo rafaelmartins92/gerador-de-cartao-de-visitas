@@ -53,6 +53,7 @@ export default function Form({ onSubmit }) {
             })}
             onInput={handlePhoneMask}
             maxLength={15}
+            inputMode="numeric"
           />
           {errors.phone && <span className="body-xs">Telefone inválido</span>}
         </label>
