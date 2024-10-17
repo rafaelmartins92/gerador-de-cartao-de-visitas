@@ -1,0 +1,28 @@
+@import '../../../styles/colors';
+
+.header {
+  padding: 24px;
+  background-color: $color-white;
+  color: $color-gray-100;
+
+  .headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 150px;
+
+      @media (max-width: 768px) {
+        max-width: 100px;
+      }
+    }
+
+    h4 {
+      @media (max-width: 368px) {
+        display: none;
+      }
+    }
+  }
+}

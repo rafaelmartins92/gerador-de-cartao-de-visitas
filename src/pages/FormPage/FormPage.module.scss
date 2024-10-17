@@ -1,0 +1,47 @@
+.hero {
+  padding: 72px 24px;
+
+  @media (max-width: 768px) {
+    padding-block: 54px;
+  }
+
+  .heroWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    .heroText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      text-align: center;
+
+      p {
+        max-width: 620px;
+      }
+    }
+
+    .heroContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .heroImage {
+        max-width: 470px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+          padding-inline: 30px;
+        }
+      }
+    }
+  }
+}

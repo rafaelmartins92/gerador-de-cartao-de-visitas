@@ -1,22 +1,20 @@
 import PropTypes from 'prop-types';
-import Button from '../Button/Button';
-import ExternalLink from '../ExternalLink/ExternalLink';
+import symbol from '../../assets/symbol-rd-station-default.svg';
+import styles from './BusinessCard.module.scss';
 
 export default function BusinessCard({ userData }) {
   return (
-    <>
-      <Button text="Gerar outro cartão" onClick={userData.clearForm} />
-
-      <div className="business-card">
-        <p>{userData.name}</p>
-        <p>{userData.phone}</p>
-        <p>{userData.email}</p>
+    <div className={styles.businessCard}>
+      <div className={styles.cardImage}>
+        <img src={symbol} alt="Símbolo da RD Station" loading="lazy" className={styles.symbol} />
       </div>
-
-      <Button text="BAIXAR CARTÃO" disabled={true} />
-
-      <ExternalLink text="fazer um teste grátis do RD Station Marketing" href="https://app.rdstation.com.br/signup" />
-    </>
+      <span className={styles.divider}></span>
+      <div className={styles.fields}>
+        <p className="body-lg captitalize">{userData.name}</p>
+        <p className="body-lg">{userData.phone}</p>
+        <p className="body-lg">{userData.email}</p>
+      </div>
+    </div>
   );
 }
 

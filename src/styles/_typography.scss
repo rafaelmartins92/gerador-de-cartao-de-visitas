@@ -6,6 +6,10 @@ $font-family-body: 'Nunito Sans', sans-serif;
   font-size: 56px;
   font-weight: 900;
   line-height: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 }
 
 @mixin heading-md {
@@ -13,6 +17,10 @@ $font-family-body: 'Nunito Sans', sans-serif;
   font-size: 40px;
   font-weight: 900;
   line-height: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 }
 
 @mixin heading-sm {
@@ -20,13 +28,21 @@ $font-family-body: 'Nunito Sans', sans-serif;
   font-size: 32px;
   font-weight: 900;
   line-height: 110%;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 @mixin heading-xs {
   font-family: $font-family-heading;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 110%;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 @mixin subtitle-sm {
@@ -34,6 +50,10 @@ $font-family-body: 'Nunito Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 140%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 @mixin subtitle-xs {
@@ -48,6 +68,10 @@ $font-family-body: 'Nunito Sans', sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 150%;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 @mixin body-md {
@@ -60,6 +84,13 @@ $font-family-body: 'Nunito Sans', sans-serif;
 @mixin body-sm {
   font-family: $font-family-body;
   font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+@mixin body-xs {
+  font-family: $font-family-body;
+  font-size: 12px;
   font-weight: 400;
   line-height: 150%;
 }
@@ -80,6 +111,11 @@ h4 {
   @include heading-xs;
 }
 
+ul,
+small {
+  @include body-xs;
+}
+
 .subtitle-sm {
   @include subtitle-sm;
 }
@@ -98,4 +134,8 @@ h4 {
 
 .body-sm {
   @include body-sm;
+}
+
+.body-xs {
+  @include body-xs;
 }

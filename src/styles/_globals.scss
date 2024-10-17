@@ -1,0 +1,23 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.captitalize {
+  text-transform: capitalize;
+}
+
+.decoration-none {
+  text-decoration: none;
+}

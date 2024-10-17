@@ -1,0 +1,20 @@
+@import '../../../styles/colors';
+
+.footer {
+  margin-top: auto;
+  padding: 24px;
+  background-color: $color-gray-10;
+  color: $color-gray-80;
+
+  .footerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width: 368px) {
+      flex-direction: column;
+    }
+  }
+}

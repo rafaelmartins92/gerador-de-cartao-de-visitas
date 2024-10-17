@@ -1,5 +1,6 @@
 @import './styles/colors';
 @import './styles/typography';
+@import './styles/transitions';
 
 * {
   margin: 0;
@@ -16,4 +17,19 @@ body {
   color: $color-white;
 }
 
-@import './styles/transitions';
+ul {
+  list-style-position: inside;
+  padding-left: 8px;
+}
+
+a {
+  color: inherit;
+
+  transition: $transition-ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@import './styles/globals';

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Route, Routes, Navigate, useNavigate } from 'react-router-dom';
-import Form from './components/Form/Form';
-import BusinessCard from './components/BusinessCard/BusinessCard';
-import './App.scss';
+import FormPage from './pages/FormPage/FormPage';
+import CardPage from './pages/CardPage/CardPage';
+import Layout from './components/Layout/Layout';
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -19,10 +19,25 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Form onSubmit={handleFormSubmit} />} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <FormPage onSubmit={handleFormSubmit} />
+          </Layout>
+        }
+      />
       <Route
         path="/card"
-        element={userData ? <BusinessCard userData={{ ...userData, clearForm }} /> : <Navigate to="/" />}
+        element={
+          userData ? (
+            <Layout>
+              <CardPage userData={userData} clearForm={clearForm} />
+            </Layout>
+          ) : (
+            <Navigate to="/" />
+          )
+        }
       />
     </Routes>
   );

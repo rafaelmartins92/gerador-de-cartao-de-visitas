@@ -1,0 +1,31 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+@import '../../styles/transitions';
+
+.link {
+  color: $color-white;
+  font-family: $font-family-body;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+
+  transition: $transition-ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
